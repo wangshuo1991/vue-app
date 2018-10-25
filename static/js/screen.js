@@ -6,8 +6,7 @@
     var designWidth = 640, deviceWidth = document.documentElement.clientWidth, scaleRatio = deviceWidth / designWidth;
 
     if(deviceWidth>640){
-        var layout = document.querySelector(".app");
-        layout.className = 'app app-640';
+        document.documentElement.style.fontSize = "80px";
         return;
     }
 

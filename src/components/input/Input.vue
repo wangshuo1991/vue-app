@@ -47,7 +47,7 @@ export default {
 </script>
 <style lang="scss" scoped>
     .from-input {
-        padding: .2rem;
+        padding-bottom: .3rem;
 
     }
 </style>

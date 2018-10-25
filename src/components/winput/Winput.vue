@@ -1,11 +1,15 @@
 <template>
-  <div class="w-input-wrapper">
-      <div class="input-name" v-text="title"></div>
-      <input 
-      :type="type" 
-      :placeholder="placeholder" 
-      :value="value">
-  </div>
+  <div class="input-box">
+    <div class="w-input-wrapper">
+        <div class="input-name" v-text="title"></div>
+        <input 
+        :type="type" 
+        :placeholder="placeholder" 
+        :value="value">
+    </div>
+
+  </div>  
+  
 </template>
 
 <script>
@@ -29,7 +33,13 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.w-input-wrapper {
+
+.input-box {
+
+    padding: 0 .2rem;
+    background: #fff;
+
+    .w-input-wrapper {
     width: 100%;
     height: .8rem;
     position: relative;
@@ -40,12 +50,15 @@ export default {
         position: absolute;
         top: .1rem;
         left: 0;
-        width: 2rem;
+        width: 1.8rem;
         height: 0.8rem;
         line-height: .8rem;
         text-align: left;
         font-size: .28rem;
         color: #333;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
     input {
@@ -53,10 +66,12 @@ export default {
         width: 100%;
         height: 0.8rem;
         line-height: .4rem;
-        padding: .2rem 0 .2rem 2rem;
+        padding: .2rem 0 .2rem 1.8rem;
         box-sizing: border-box;
         color: #878787;
         font-size: .28rem;
     }
 }
+}
+
 </style>

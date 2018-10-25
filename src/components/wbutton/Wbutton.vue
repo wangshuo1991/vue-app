@@ -27,6 +27,8 @@ export default {
 </script>
 <style lang="scss" scoped>
 .button-wrapper {
+    padding: 0 .2rem;
+    margin-top: .2rem;
     button {
         width: 100%;
         height: 0.8rem;
