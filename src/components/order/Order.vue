@@ -1,14 +1,14 @@
 <template>
   <div class="order-wrapper">
-      <div class="my-header">
-          <h1 class="my-title">订单首页</h1>
-          <div class="search">
-            <input
-             type="text" 
-             class="search-ipt" 
-             placeholder="请输入查询企业" 
-             v-model="keyword">
-          </div>
+      
+      <top-bar title="订单查询"></top-bar>
+
+      <div class="search">
+        <input
+            type="text" 
+            class="search-ipt" 
+            placeholder="请输入查询企业" 
+            v-model="keyword">
       </div>
       
       <div class="order-info" ref="orderInfos">
@@ -38,9 +38,13 @@
 
 <script>
 import BScroll from 'better-scroll';
+import TopBar from '../topbar/TopBar'
+
 
 export default {
-  components:{},
+  components:{
+      TopBar
+  },
   props:{},
   data(){
     return {
@@ -82,42 +86,24 @@ export default {
 
     .order-wrapper {
 
-        .my-header {
-            position: relative;
-            top: 0;
-            left: 0;
-            width: 100%;       
-            font-weight: 700;
-            background: #4B74E5;
+        .search {
+            font-size: 0;
+            padding: .25rem;
+            background: #4b74e5;
 
-            .my-title {
-                font-size: .34rem;
-                height: .8rem;
-                line-height: .8rem;
+            .search-ipt {
                 width: 100%;
-                text-align: center;
-                color: #fff;
+                display: inline-block;
+                height: .6rem;
+                box-sizing: border-box;
+                padding-left: .2rem;
+                font-size: .24rem;
+                vertical-align: top;
+                border-radius: .4rem;
             }
-
-            .search {
-                font-size: 0;
-                padding: .25rem;
-
-                .search-ipt {
-                    width: 100%;
-                    display: inline-block;
-                    height: .6rem;
-                    box-sizing: border-box;
-                    padding-left: .2rem;
-                    font-size: .24rem;
-                    vertical-align: top;
-                    border-radius: .4rem;
-                }
-            }
-
-            
         }
 
+            
         .order-info {
             position: fixed;
             top: 2.2rem;
