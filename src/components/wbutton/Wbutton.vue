@@ -30,7 +30,7 @@ export default {
     button {
         width: 100%;
         height: 0.8rem;
-        border-radius: .24rem;
+        border-radius: .4rem;
         background: #4b74e5;
         font-size: .28rem;
         text-align: center;
