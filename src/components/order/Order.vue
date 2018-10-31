@@ -16,7 +16,8 @@
               <li 
               class="order-item" 
               v-for="item in searchResult()" 
-              :key="item.id">
+              :key="item.id"
+              @click="selectInfo(item)">
                   <div class="order-avstar">
                       <img src="" alt="">
                   </div>
@@ -32,6 +33,7 @@
           </ul>
       </div>
 
+      <Details :details="currentList" ref="details"></Details>  
 
   </div>
 </template>
@@ -39,17 +41,19 @@
 <script>
 import BScroll from 'better-scroll';
 import TopBar from '../topbar/TopBar'
-
+import Details from '../details/Details'
 
 export default {
   components:{
-      TopBar
+      TopBar,
+      Details
   },
   props:{},
   data(){
     return {
         orderList: [],
-        keyword: ''
+        keyword: '',
+        currentList: {}
     }
   },
   watch:{},
@@ -58,9 +62,9 @@ export default {
     getProInfo(){ /* 获取数据 */
         this.$http.get("/api/orderList").then((res) => {
             this.orderList = res.body.data;
-            console.log(res.body.data);
             this.$nextTick(() => {
                 this._initScroll();
+                
             });
         });
     },
@@ -74,12 +78,17 @@ export default {
                 return item;
             }
         });
-    }  
+    },
+    selectInfo(item){
+        // this.$refs.details.showFn();
+    }
   },
   created(){
       this.getProInfo();
   },
-  mounted(){}
+  mounted(){
+      
+  }
 }
 </script>
 <style lang="scss" scoped>
