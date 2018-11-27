@@ -4,43 +4,50 @@
         "id": "001",
         "company": "欧莱雅高端美容顾问",
         "orderTime": "2018-10-12",
-        "orderCode": "2018101202110001"
+        "orderCode": "2018101202110001",
+        "logo": "https://www.lorealparis.com.cn/images/themes/logo.png?v=1025"
       },
       {
         "id": "002",
         "company": "上海巨匠信息科技有限公司",
         "orderTime": "2018-10-09",
-        "orderCode": "2018100902110001"
+        "orderCode": "2018100902110001",
+        "logo": "http://www.jujiang.cn/images/logo.png"
       },
       {
         "id": "003",
         "company": "美团客服部",
         "orderTime": "2018-09-29",
-        "orderCode": "2018092902110023"
+        "orderCode": "2018092902110023",
+        "logo": "https://s0.meituan.net/bs/fe-web-meituan/e5eeaef/img/logo.png"
       },
       {
         "id": "004",
         "company": "上海薪火信息科技",
         "orderTime": "2018-09-22",
-        "orderCode": "2018092202110019"
+        "orderCode": "2018092202110019",
+        "logo": "http://www.xinhuokj.com/Public/Home/images/logos.png"
       },
       {
         "id": "005",
         "company": "伊美服饰",
         "orderTime": "2018-09-19",
-        "orderCode": "2018091902110018"
+        "orderCode": "2018091902110018",
+        "logo": "http://img.jituwang.com/uploads/allimg/150110/259502-15011022221592.jpg"
       },
       {
         "id": "006",
         "company": "上海博世软件服务",
         "orderTime": "2018-09-14",
-        "orderCode": "2018091402110012"
+        "orderCode": "2018091402110012",
+        "logo": "http://img.jituwang.com/uploads/allimg/131122/259793-1311220SZ9100.jpg"
       },
       {
         "id": "007",
         "company": "科创互联科技有限公司",
         "orderTime": "2018-09-12",
-        "orderCode": "2018091202110056"
+        "orderCode": "2018091202110056",
+        "logo": "http://img.jituwang.com/uploads/allimg/151208/258057-15120R3593535.jpg"
       },
       {
         "id": "008",

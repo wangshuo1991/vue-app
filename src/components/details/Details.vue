@@ -1,16 +1,16 @@
 <template>
   <div class="order-details" v-show="show">
-      <top-bar title="订单详情"></top-bar>
+      
 
   </div>
 </template>
 
 <script>
-import TopBar from '../topbar/TopBar'
+
 
 export default {
   components:{
-    TopBar
+
   },
   props:{
     details: {

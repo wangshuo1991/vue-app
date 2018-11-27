@@ -1,7 +1,7 @@
 <template>
   <div class="order-wrapper">
       
-      <top-bar title="订单查询"></top-bar>
+      <Top>首页</Top>
 
       <div class="search">
         <input
@@ -19,7 +19,7 @@
               :key="item.id"
               @click="selectInfo(item)">
                   <div class="order-avstar">
-                      <img src="" alt="">
+                      <img :src="item.logo" alt="">
                   </div>
                   <div class="order-content">
                       <h2 class="company">{{item.company}}</h2>
@@ -40,12 +40,12 @@
 
 <script>
 import BScroll from 'better-scroll';
-import TopBar from '../topbar/TopBar'
+import Top from '@/base/Top.vue'
 import Details from '../details/Details'
 
 export default {
   components:{
-      TopBar,
+      Top,
       Details
   },
   props:{},
@@ -96,9 +96,14 @@ export default {
     .order-wrapper {
 
         .search {
+            position: fixed;
+            top: .8rem;
+            left: 0;
+            width: 100%;
             font-size: 0;
             padding: .25rem;
             background: #4b74e5;
+            box-sizing: border-box;
 
             .search-ipt {
                 width: 100%;
@@ -132,8 +137,14 @@ export default {
                     flex: 0 0 1rem;
                     width: 1rem;
                     height: 1rem;
-                    background: #f1f1f1;
+                    background: #fff;
                     margin-right: .2rem;
+                    overflow: hidden;
+
+                    img {
+                        display: block;
+                        width: 100%;
+                    }
                 }
 
                 .order-content {

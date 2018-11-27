@@ -1,6 +1,6 @@
 <template>
   <div class="form-wrapper">
-    <top-bar title="预约单"></top-bar>
+    
 
     <div class="from-input">
         <Winput title="姓名" type="text" placeholder="请输入姓名" v-model="clientName"></Winput>
@@ -19,13 +19,12 @@
 <script>
 
 
-import TopBar from '../topbar/TopBar'
+
 import Winput from '../winput/Winput'
 import Wbutton from '../wbutton/Wbutton'
 
 export default {
   components:{
-      TopBar,
       Winput,
       Wbutton
   },
