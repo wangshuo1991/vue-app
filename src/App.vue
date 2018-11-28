@@ -33,6 +33,7 @@ export default {
   bottom: 0;
   left: 0;
   right: 0;
+  overflow: auto;
 }
 </style>
 

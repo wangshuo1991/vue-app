@@ -5,6 +5,8 @@
         "company": "欧莱雅高端美容顾问",
         "orderTime": "2018-10-12",
         "orderCode": "2018101202110001",
+        "tel": "021-5588 2599",
+        "adress": "上海市天山西路1099号5楼",
         "logo": "https://www.lorealparis.com.cn/images/themes/logo.png?v=1025"
       },
       {
@@ -12,6 +14,8 @@
         "company": "上海巨匠信息科技有限公司",
         "orderTime": "2018-10-09",
         "orderCode": "2018100902110001",
+        "tel": "021-4506 6026",
+        "adress": "上海市张江科技园区A区10号楼",
         "logo": "http://www.jujiang.cn/images/logo.png"
       },
       {
@@ -19,13 +23,22 @@
         "company": "美团客服部",
         "orderTime": "2018-09-29",
         "orderCode": "2018092902110023",
-        "logo": "https://s0.meituan.net/bs/fe-web-meituan/e5eeaef/img/logo.png"
+        "tel": "021-2266 1212",
+        "adress": "上海市宜山路民润大厦3楼",
+        "logo": "https://s0.meituan.net/bs/fe-web-meituan/e5eeaef/img/logo.png",
+        "employee": {
+          "total": 120,
+          "male": 99,
+          "female": [11,10]
+        }
       },
       {
         "id": 4,
         "company": "上海薪火信息科技",
         "orderTime": "2018-09-22",
         "orderCode": "2018092202110019",
+        "tel": "021-2266 1212",
+        "adress": "上海市中山西路299号科创大厦9楼",
         "logo": "http://www.xinhuokj.com/Public/Home/images/logos.png"
       },
       {
@@ -33,6 +46,8 @@
         "company": "伊美服饰",
         "orderTime": "2018-09-19",
         "orderCode": "2018091902110018",
+        "tel": "025-7745 2085",
+        "adress": "南京市胡龙口2099号",
         "logo": "http://img.jituwang.com/uploads/allimg/150110/259502-15011022221592.jpg"
       },
       {
@@ -40,6 +55,8 @@
         "company": "上海博世软件服务",
         "orderTime": "2018-09-14",
         "orderCode": "2018091402110012",
+        "tel": "0571-7745 2085",
+        "adress": "杭州市西溪创业园B栋12楼1206",
         "logo": "http://img.jituwang.com/uploads/allimg/131122/259793-1311220SZ9100.jpg"
       },
       {
@@ -47,25 +64,33 @@
         "company": "科创互联科技有限公司",
         "orderTime": "2018-09-12",
         "orderCode": "2018091202110056",
+        "tel": "028-36885266",
+        "adress": "成都市人民路888号火炬大厦606",
         "logo": "http://img.jituwang.com/uploads/allimg/151208/258057-15120R3593535.jpg"
       },
       {
         "id": 8,
         "company": "上海领里置业有限公司",
         "orderTime": "2018-09-09",
+        "tel": "021-6542 6566",
+        "adress": "上海市漕宝路桂林路3099号1楼",
         "orderCode": "2018090902110079"
       },
       {
         "id": 9,
         "company": "款至金融服务有限公司（上海）",
         "orderTime": "2018-09-01",
-        "orderCode": "2018090102110078"
+        "orderCode": "2018090102110078",
+        "tel": "021-6542 6566",
+        "adress": "上海市南京西路977号"
       },
       {
         "id": 10,
         "company": "风来去文化产业有限公司",
         "orderTime": "2018-08-31",
-        "orderCode": "2018083102110041"
+        "orderCode": "2018083102110041",
+        "tel": "0512-5120 0576",
+        "adress": "昆山市博来路156号"
       }
   ]
 }

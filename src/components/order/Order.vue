@@ -62,7 +62,6 @@ export default {
   methods:{
     getProInfo(){ /* 获取数据 */
         this.$http.get("/api/orderList").then((res) => {
-            console.log(res);
             this.orderList = res.data.data;
             this.$nextTick(() => {
                 this._initScroll();
