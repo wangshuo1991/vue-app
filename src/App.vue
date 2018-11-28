@@ -26,8 +26,14 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss">
+.main-content {
+  position: fixed;
+  top: .8rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
 </style>
 
 

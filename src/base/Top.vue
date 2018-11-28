@@ -1,20 +1,30 @@
 <template>
   <div class="top">
       <slot></slot>
+      <i class="iconfont icon-icon-test" v-if="back" @click="goback"></i>
   </div>
 </template>
 
 <script>
 export default {
   components:{},
-  props:{},
+  props:{
+    back: {
+      type: Boolean,
+      default: false
+    }
+  },
   data(){
     return {
     }
   },
   watch:{},
   computed:{},
-  methods:{},
+  methods:{
+    goback(){
+      this.$router.go(-1);
+    }
+  },
   created(){},
   mounted(){}
 }
@@ -31,6 +41,11 @@ export default {
     font-size: .34rem;
     color: #fff;
     background: #4B74E5;
+
+    i {
+      position: absolute;
+      left: .2rem;
+    }
 
 }
 </style>

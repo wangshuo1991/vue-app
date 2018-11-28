@@ -3,11 +3,10 @@
 import Vue from 'vue'
 import App from './App.vue'
 import '../static/js/screen'
-import vueResource from 'vue-resource'
 import Router from 'vue-router'
+import axios from 'axios'
 
-
-Vue.use(vueResource);
+Vue.prototype.$http = axios;
 Vue.use(Router);
 
 import router from './router/index.js'
@@ -19,6 +18,5 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   render: c => c(App),
-  vueResource,
   router,
 })

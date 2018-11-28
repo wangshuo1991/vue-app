@@ -1,32 +1,33 @@
 <template>
-  <div class="order-details" v-show="show">
+  <div class="order-details">
+      <Top :back="true">订单详情</Top>
+      <div class="main-content">
+        {{$route.params.lid}}
+      </div>
       
-
   </div>
 </template>
 
 <script>
 
-
+import Top from '@/base/Top.vue'
 export default {
   components:{
-
+    Top
   },
   props:{
-    details: {
-      type: Object
-    }
+  
   },
   data(){
     return {
-      show: false
+      
     }
   },
   watch:{},
   computed:{},
   methods:{
-    showFn(){
-      this.show = true;
+    getInfo(){
+      
     }
   },
   created(){},
@@ -35,11 +36,12 @@ export default {
 </script>
 <style lang="scss" scoped>
   .order-details {
-    width: 100%;
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
+    right: 0;
     background: #f1f1f1;
+    z-index: 100;
   }
 </style>

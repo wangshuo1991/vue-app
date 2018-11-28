@@ -2,6 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Order from '../components/order/Order.vue'
 import Input from '../components/input/Input.vue'
+import Detail from '../components/details/Details.vue'
+import Err from '../components/err/Err.vue'
 
 Vue.use(Router)
 
@@ -9,10 +11,11 @@ var router = new Router({
     routes: [
        {path: "/order",component: Order}, 
        {path: "/input",component: Input},
-       {path: "/",redirect: "/order"}
+       {path: "/detail/:lid",component: Detail,name: 'detail'},
+       {path: "/",redirect: "/order"},
+       {path: "*",component: Err}
         
-    ],
-    mode: 'history'
+    ]
 });
 
 export default router;

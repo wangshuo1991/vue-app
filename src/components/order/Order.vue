@@ -13,11 +13,12 @@
       
       <div class="order-info" ref="orderInfos">
           <ul>
-              <li 
+              <router-link 
               class="order-item" 
-              v-for="item in searchResult()" 
-              :key="item.id"
-              @click="selectInfo(item)">
+              v-for="(item,index) in searchResult()" 
+              :key="index"
+              :to="{name:'detail',params:{lid:item.id}}"
+              tag="li">
                   <div class="order-avstar">
                       <img :src="item.logo" alt="">
                   </div>
@@ -29,11 +30,13 @@
                       </p>
                   </div>
                   
-              </li>
+              </router-link >
           </ul>
       </div>
 
-      <Details :details="currentList" ref="details"></Details>  
+
+        <router-view></router-view>
+      
 
   </div>
 </template>
@@ -41,12 +44,10 @@
 <script>
 import BScroll from 'better-scroll';
 import Top from '@/base/Top.vue'
-import Details from '../details/Details'
 
 export default {
   components:{
-      Top,
-      Details
+      Top
   },
   props:{},
   data(){
@@ -61,7 +62,8 @@ export default {
   methods:{
     getProInfo(){ /* 获取数据 */
         this.$http.get("/api/orderList").then((res) => {
-            this.orderList = res.body.data;
+            console.log(res);
+            this.orderList = res.data.data;
             this.$nextTick(() => {
                 this._initScroll();
                 
@@ -70,6 +72,10 @@ export default {
     },
     _initScroll () { /* 初始化 better-scroll */
         this.orderInfosScroll = new BScroll(this.$refs.orderInfos,{
+
+            click: true,
+
+            taps: true
         }); 
     },
     searchResult () { /* 根据输入结果显示内容 */
@@ -78,9 +84,6 @@ export default {
                 return item;
             }
         });
-    },
-    selectInfo(item){
-        // this.$refs.details.showFn();
     }
   },
   created(){
