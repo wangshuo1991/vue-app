@@ -1,7 +1,8 @@
 <template>
   <div class="order-details">
       <Top :back="true">订单详情</Top>
-      <div class="main-content">
+      <Loading v-if="loading"></Loading>
+      <div class="main-content" v-else>
         <div class="company-info">
           <div class="info-bg">
           </div>
@@ -41,9 +42,11 @@
 <script>
 
 import Top from '@/base/Top.vue'
+import Loading from '@/base/Loading.vue'
+
 export default {
   components:{
-    Top
+    Top,Loading
   },
   props:{
   
@@ -51,6 +54,7 @@ export default {
   data(){
     return {
       detail: {},
+      loading: true
     }
   },
   watch:{},
@@ -71,7 +75,12 @@ export default {
     }
   },
   created(){
-    this.getInfo();
+    let _this = this;
+    setTimeout(() => {
+      _this.loading = false;
+      _this.getInfo();
+    }, 2000);
+    
   },
   mounted(){}
 }
