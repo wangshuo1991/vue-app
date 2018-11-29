@@ -44,17 +44,19 @@
 <script>
 import BScroll from 'better-scroll';
 import Top from '@/base/Top.vue'
+import Loading from '@/base/Loading.vue'
 
 export default {
   components:{
-      Top
+      Top,Loading
   },
   props:{},
   data(){
     return {
         orderList: [],
         keyword: '',
-        currentList: {}
+        currentList: {},
+        loading: true
     }
   },
   watch:{},
@@ -86,7 +88,9 @@ export default {
     }
   },
   created(){
+      
       this.getProInfo();
+     
   },
   mounted(){
       
