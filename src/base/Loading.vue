@@ -45,7 +45,7 @@ export default {
       left: 50%;
       transform: translate(-50%,-50%);
       height: .2rem;
-      z-index: 51;
+      z-index: 1000;
       overflow: hidden;
 
       span {

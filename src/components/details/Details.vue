@@ -1,7 +1,7 @@
 <template>
   <div class="order-details">
       <Top :back="true">订单详情</Top>
-      <Loading v-if="loading"></Loading>
+      <Loading class="loading-layout" v-if="loading"></Loading>
       <div class="main-content" v-else>
         <div class="company-info">
           <div class="info-bg">
@@ -34,6 +34,10 @@
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="ctrl-box">
+        <button>立即预约</button>
       </div>
       
   </div>
@@ -95,86 +99,108 @@ export default {
     background: #f1f1f1;
     z-index: 100;
 
-    .company-info {
-      width: 100%;
-      padding-bottom: .3rem;
-      position: relative;
-
-      .info-bg {
-        position: absolute;
-        width: 100%;
-        height: 2.4rem;
-        background: #4B74E5;
-        z-index: 20;
-      }
-
-      .info-content {
-        padding: .3rem .2rem;
-        overflow: hidden;
-        position: relative;
-        z-index: 30;
-
-        .company {
-          position: absolute;
-          width: 1rem;
-          height: 1rem;
-          border-radius: 50%;
-          top: .15rem;
-          left: 50%;
-          transform: translateX(-50%);
-          box-shadow: 3px 3px 20px rgba(0,0,0,.2);
-          overflow: hidden;
-        }
-        
-        ul {
-          padding: .6rem .2rem .2rem .2rem;
-          margin-top: .4rem;
-          background: #fff;
-          border-radius: .2rem;
-
-            li {
-              line-height: 2.2;
-              font-size: .24rem;
-              color: rgb(155, 155, 155);
-              display: flex;
-
-              span {
-                font-size: .24rem;
-                
-                &:first-child{
-                  flex: 0 0 80px;  
-                }
-
-                &:last-child{
-                  flex: 1;
-                  color: #333;  
-                  margin-left: .2rem;
-                  overflow: hidden;
-                  white-space: nowrap;
-                  text-overflow: ellipsis;
-                }
-                
-                
-              }
-            }
-        }
-
-        .container {
-          margin-top: .3rem;
-          padding: .2rem;
-          height: 1.6rem;
-          background: #fff;
-          border-radius: .2rem;
-
-          .container-title {
-            font-size: .26rem;
-            font-weight: 600;
-            color: rgb(46, 48, 75);
-          }
-        }
-        
-      }
-
+    .loading-layout {
+      z-index: 200;
     }
+    .main-content{
+      .company-info {
+        width: 100%;
+        padding-bottom: .3rem;
+        position: relative;
+
+        .info-bg {
+          position: absolute;
+          width: 100%;
+          height: 2.4rem;
+          background: #4B74E5;
+          z-index: 20;
+        }
+
+        .info-content {
+          padding: .3rem .2rem;
+          overflow: hidden;
+          position: relative;
+          z-index: 30;
+
+          .company {
+            position: absolute;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            top: .15rem;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 3px 3px 20px rgba(0,0,0,.2);
+            overflow: hidden;
+          }
+          
+          ul {
+            padding: .6rem .2rem .2rem .2rem;
+            margin-top: .4rem;
+            background: #fff;
+            border-radius: .2rem;
+
+              li {
+                line-height: 2.2;
+                font-size: .24rem;
+                color: rgb(155, 155, 155);
+                display: flex;
+
+                span {
+                  font-size: .24rem;
+                  
+                  &:first-child{
+                    flex: 0 0 80px;  
+                  }
+
+                  &:last-child{
+                    flex: 1;
+                    color: #333;  
+                    margin-left: .2rem;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                  }
+                  
+                  
+                }
+              }
+          }
+
+          .container {
+            margin-top: .3rem;
+            padding: .2rem;
+            height: 1.6rem;
+            background: #fff;
+            border-radius: .2rem;
+
+            .container-title {
+              font-size: .26rem;
+              font-weight: 600;
+              color: rgb(46, 48, 75);
+            }
+          }
+          
+        }
+
+      }
+    }
+
+    .ctrl-box {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: .8rem;
+      background: #fff;
+      z-index: 101;
+
+      button {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    
   }
 </style>
