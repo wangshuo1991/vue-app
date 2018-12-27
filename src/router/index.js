@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Order from '../components/order/Order.vue'
-import Input from '../components/input/Input.vue'
 import Detail from '../components/details/Details.vue'
 import Err from '../components/err/Err.vue'
 
